@@ -1,1 +1,99 @@
-안녕
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BINARY - Computer Science Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22c55e", // Sprout Green
+                        "primary-hover": "#16a34a",
+                        "background-light": "#ffffff",
+                        "text-main": "#0f172a", // Slate 900
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                        "mono": ["monospace", "ui-monospace", "SFMono-Regular"]
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Noto Sans", sans-serif;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: "Space Grotesk", sans-serif;
+        }
+        .nav-fixed {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 min-h-screen flex flex-col font-body">
+
+<header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
+  <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+
+    <!-- LEFT -->
+    <div class="flex items-center gap-3 w-40">
+      <a href="index.html" class="text-xl font-bold tracking-tight font-display">BINARY</a>
+    </div>
+
+    <!-- CENTER -->
+    <nav class="hidden md:flex items-center gap-10">
+      <a class="text-sm font-bold text-black border-b-2 border-primary pb-0.5 uppercase tracking-wide" href="index.html">Home</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="pages/about.html">About</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="pages/activity.html">Activity</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="pages/board/Board.html?page=1">Board</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="#">Ranking</a>
+    </nav>
+
+    <!-- RIGHT -->
+    <div class="flex items-center justify-end gap-4 w-40">
+      <button onclick="location.href='pages/login.html'"
+        class="flex items-center justify-center px-6 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-bold transition-all shadow-md hover:shadow-lg font-body">
+        Login
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <button class="md:hidden text-2xl">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+
+  </div>
+</header>
+
+
+<header class="relative flex-grow flex items-center justify-center overflow-hidden bg-white text-slate-900">
+
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] select-none">
+<span class="material-symbols-outlined text-[600px] text-black leading-none">terminal</span>
+</div>
+<div class="relative z-10 max-w-[1280px] w-full mx-auto px-6 text-center flex flex-col items-center gap-8">
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter font-mono text-slate-900 whitespace-nowrap">
+                print("Hello <span class="text-primary">BINARY</span> world!")
+            </h1>
+<p class="text-xl md:text-2xl text-slate-500 font-medium tracking-wide font-body">
+                AI로봇학과 학술&친목 동아리
+            </p>
+<div class="mt-8">
+<button onclick="location.href='pages/about.html'" class="flex items-center gap-2 px-10 py-4 rounded-lg bg-primary hover:bg-primary-hover text-white font-bold text-lg tracking-wide transition-all shadow-[0_10px_30px_rgba(34,197,94,0.3)] hover:shadow-[0_15px_40px_rgba(34,197,94,0.4)] hover:-translate-y-1">
+                    ENTER BINARY
+                </button>
+</div>
+</div>
+</header>
+</body></html>
