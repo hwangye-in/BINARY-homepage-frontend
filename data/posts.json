@@ -1,15 +1,15 @@
 {
   "items": [
-    { "id": 120, "category": "NOTICE", "title": "Welcome to Binary Club - 2023 Semester Start", "author": "Admin", "date": "2023-10-25" },
-    { "id": 119, "category": "GENERAL", "title": "Looking for study group members (Python & AI)", "author": "jdoe_99", "date": "2023-10-24" },
-    { "id": 118, "category": "EVENT", "title": "Hackathon Results and Photos - Check it out!", "author": "staff_alice", "date": "2023-10-23" },
-    { "id": 117, "category": "FREE", "title": "Does anyone have a spare 27\" monitor to sell?", "author": "dev_mike", "date": "2023-10-22" },
-    { "id": 116, "category": "NOTICE", "title": "Server maintenance schedule (Nov 1st) - 02:00 AM", "author": "sysadmin", "date": "2023-10-21" },
-    { "id": 115, "category": "Q&A", "title": "Question about the React workshop next week", "author": "newbie_01", "date": "2023-10-20" },
-    { "id": 114, "category": "GENERAL", "title": "Recommended resources for learning Rust language?", "author": "rust_fan", "date": "2023-10-19" },
-    { "id": 113, "category": "FREE", "title": "Lunch meetup tomorrow at the cafeteria?", "author": "social_lead", "date": "2023-10-18" },
-    { "id": 112, "category": "Q&A", "title": "How to configure ESLint with TypeScript properly?", "author": "coder_kai", "date": "2023-10-17" },
-    { "id": 111, "category": "EVENT", "title": "Tech Talk: The future of Web Assembly", "author": "speaker_tom", "date": "2023-10-16" }
+    { "id": 120, "category": "10기", "title": "Welcome to Binary Club - 2023 Semester Start", "author": "Admin", "date": "2023-10-25" },
+    { "id": 119, "category": "10기", "title": "Looking for study group members (Python & AI)", "author": "jdoe_99", "date": "2023-10-24" },
+    { "id": 118, "category": "10기", "title": "Hackathon Results and Photos - Check it out!", "author": "staff_alice", "date": "2023-10-23" },
+    { "id": 117, "category": "10기", "title": "Does anyone have a spare 27\" monitor to sell?", "author": "dev_mike", "date": "2023-10-22" },
+    { "id": 116, "category": "10기", "title": "Server maintenance schedule (Nov 1st) - 02:00 AM", "author": "sysadmin", "date": "2023-10-21" },
+    { "id": 115, "category": "11기", "title": "Question about the React workshop next week", "author": "newbie_01", "date": "2023-10-20" },
+    { "id": 114, "category": "10기", "title": "Recommended resources for learning Rust language?", "author": "rust_fan", "date": "2023-10-19" },
+    { "id": 113, "category": "11기", "title": "Lunch meetup tomorrow at the cafeteria?", "author": "social_lead", "date": "2023-10-18" },
+    { "id": 112, "category": "11기", "title": "How to configure ESLint with TypeScript properly?", "author": "coder_kai", "date": "2023-10-17" },
+    { "id": 111, "category": "11기", "title": "Tech Talk: The future of Web Assembly", "author": "speaker_tom", "date": "2023-10-16" }
 
 , { "id": 120, "category": "NOTICE", "title": "Welcome to Binary Club - 2023 Semester Start", "author": "Admin", "date": "2023-10-25" },
     { "id": 119, "category": "GENERAL", "title": "Looking for study group members (Python & AI)", "author": "jdoe_99", "date": "2023-10-24" },

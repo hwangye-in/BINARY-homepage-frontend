@@ -126,16 +126,21 @@ const RankingPage = (() => {
     const second = all[1];
     const third = all[2];
 
-    setText("p1-name", first.name);
-    setText("p1-score", first.participation); // 예: "31/31"
+   setText("p1-name", first.name);
+  setText("p1-score", first.participation);
 
-    setText("p2-name", second.name);
-    setText("p2-score", `${second.participation} days`);
-    setBar("p2-bar", parsePercent(second.participation));
+  setText("p2-name", second.name);
+  setText("p2-score", `${second.participation} days`);
+  setBar("p2-bar", parsePercent(second.participation));
 
-    setText("p3-name", third.name);
-    setText("p3-score", `${third.participation} days`);
-    setBar("p3-bar", parsePercent(third.participation));
+  setText("p3-name", third.name);
+  setText("p3-score", `${third.participation} days`);
+  setBar("p3-bar", parsePercent(third.participation));
+
+
+  setText("p1-initial", (first.name || "").trim().charAt(0).toUpperCase());
+  setText("p2-initial", (second.name || "").trim().charAt(0).toUpperCase());
+  setText("p3-initial", (third.name || "").trim().charAt(0).toUpperCase());
   }
   
 
