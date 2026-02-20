@@ -52,7 +52,7 @@
 <a class="text-sm font-bold text-black border-b-2 border-primary pb-0.5 uppercase tracking-wide" href="../ranking/index.html">Ranking</a>
 </nav>
 <div class="flex items-center justify-end gap-4 w-40">
-<button onclick="location.href='login.html'"
+<button onclick="location.href='../login/index.html'"
   class="flex items-center justify-center px-6 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-bold transition-all shadow-md hover:shadow-lg font-body">
   Login
 </button>
@@ -80,8 +80,8 @@
    <div class="relative w-full bg-white rounded-2xl p-6 border border-slate-100 flex flex-col items-center gap-4 group hover:-translate-y-1 transition-transform duration-300 shadow-sm hover:shadow-md">
 
       <div class="absolute -top-4 size-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 shadow-sm border-4 border-white">2</div>
-      <div class="size-24 rounded-full p-1 border-2 border-slate-200 group-hover:border-primary transition-colors flex items-center justify-center bg-slate-50">
-        <span class="text-4xl font-bold text-slate-400">S</span>
+      <div class="size-24 rounded-full p-1 border-2 border-slate-200 group-hover:border-slate-400 transition-colors flex items-center justify-center bg-slate-50">
+        <span id="p2-initial" class="text-4xl font-bold text-slate-400"></span>
       </div>
 
       <div class="text-center">
@@ -106,7 +106,7 @@
         <span class="material-symbols-outlined text-5xl text-[#FFD700] drop-shadow-sm">emoji_events</span>
       </div>
       <div class="mt-4 size-32 rounded-full p-1 border-4 border-primary shadow-lg shadow-primary/20 flex items-center justify-center bg-primary/5">
-        <span class="text-6xl font-black text-primary">A</span>
+       <span id="p1-initial" class="text-6xl font-black text-primary"></span>
       </div>
 
       <div class="text-center">
@@ -126,7 +126,7 @@
 
       <div class="absolute -top-4 size-10 bg-[#CD7F32] rounded-full flex items-center justify-center font-bold text-white shadow-sm border-4 border-white">3</div>
       <div class="size-24 rounded-full p-1 border-2 border-slate-200 group-hover:border-[#CD7F32] transition-colors flex items-center justify-center bg-slate-50">
-        <span class="text-4xl font-bold text-slate-400">M</span>
+        <span id="p3-initial" class="text-4xl font-bold text-slate-400"></span>
       </div>
       <div class="text-center">
         <h3 id="p3-name" class="text-xl font-bold font-display tracking-tight"></h3>
@@ -202,11 +202,26 @@
 <div>
 <h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Connect</h4>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-colors" href="#">
-<span class="material-symbols-outlined text-lg">mail</span>
+<a class="w-10 h-10 rounded-full bg-gray-50 
+          flex items-center justify-center 
+          group hover:bg-black transition-colors duration-200" 
+   href="https://open.kakao.com/o/s5eNFOne">
+
+  <img src="https://cdn.simpleicons.org/kakaotalk/6B7280" 
+       alt="KakaoTalk"
+       class="w-5 h-5 transition-all duration-200 
+              group-hover:brightness-0 group-hover:invert">
 </a>
-<a class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-colors" href="#">
-<span class="material-symbols-outlined text-lg">public</span>
+
+<a class="w-10 h-10 rounded-full bg-gray-50 
+          flex items-center justify-center 
+          group hover:bg-black transition-colors duration-200" 
+   href="https://instagram.com/sejong_binary">
+
+  <img src="https://cdn.simpleicons.org/instagram/6B7280" 
+       alt="Instagram"
+       class="w-5 h-5 transition-all duration-200 
+              group-hover:brightness-0 group-hover:invert">
 </a>
 </div>
 </div>
