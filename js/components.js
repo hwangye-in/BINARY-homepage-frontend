@@ -1,7 +1,15 @@
 class AppHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
+      <style>
+        app-header {
+          display: block;
+          position: sticky;
+          top: 0;
+          z-index: 50;
+        }
+      </style>
+      <header class="w-full bg-white border-b border-gray-100">
         <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
           <div class="flex items-center gap-3 w-40">
             <a href="/" class="text-xl font-bold tracking-tight font-display">BINARY</a>
