@@ -20,13 +20,12 @@
       theme: {
         extend: {
           colors: {
+            "primary": "#22c55e",
             "primary-black": "#000000",
             "primary-hover": "#16a34a",
             "secondary-gray": "#6b7280",
             "border-light": "#e5e7eb",
             "background-light": "#ffffff",
-            "sprout": "#22c55e",
-            "sprout-hover": "#16a34a"
           },
           fontFamily: {
             "display": ["Space Grotesk", "sans-serif"],
@@ -49,13 +48,13 @@
             }
         }
         .nav-link {
-            @apply text-sm font-normal text-black hover:text-sprout transition-colors no-underline;
+            @apply text-sm font-normal text-black hover:text-primary transition-colors no-underline;
         }
     </style>
   <script src="/js/components.js" defer></script>
 </head>
 
-<body class="min-h-screen flex flex-col selection:bg-sprout selection:text-white overflow-x-hidden bg-white">
+<body class="min-h-screen flex flex-col selection:bg-primary selection:text-white overflow-x-hidden bg-white">
   <app-header></app-header>
   <main class="flex-grow flex items-center justify-center pt-[72px] pb-16 bg-white min-h-[900px]">
     <div class="w-full max-w-[440px] px-6">
@@ -70,7 +69,7 @@
             Name
           </label>
           <input name="name"
-            class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300 text-sm"
+            class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300 text-sm"
             id="full-name" placeholder="Full name" type="text" />
         </div>
 
@@ -79,7 +78,7 @@
             Student ID
           </label>
           <input name="studentId"
-            class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300 text-sm"
+            class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300 text-sm"
             id="student-id" placeholder="Student identification number" type="text" />
         </div>
 
@@ -88,7 +87,7 @@
             Email
           </label>
           <input name="email"
-            class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300 text-sm"
+            class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300 text-sm"
             id="email" placeholder="email@address.com" type="email" />
         </div>
 
@@ -98,9 +97,9 @@
           </label>
           <div class="relative">
             <input name="password"
-              class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300 text-sm"
+              class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300 text-sm"
               id="password" placeholder="Create a password" type="password" />
-            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-sprout transition-colors"
+            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors"
               type="button">
               <span class="material-symbols-outlined text-[20px]">visibility</span>
             </button>
@@ -114,9 +113,9 @@
           <p id="pw-msg" class="hidden text-xs px-1"></p>
           <div class="relative">
             <input name="confirmPassword"
-              class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300 text-sm"
+              class="w-full px-4 h-12 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300 text-sm"
               id="confirm-password" placeholder="Confirm your password" type="password" />
-            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-sprout transition-colors"
+            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors"
               type="button">
               <span class="material-symbols-outlined text-[20px]">visibility</span>
             </button>
@@ -125,7 +124,7 @@
 
         <div class="pt-2">
           <button
-            class="w-full h-12 bg-sprout text-white font-bold rounded-lg hover:bg-sprout-hover transition-all flex items-center justify-center gap-2 text-sm shadow-sm"
+            class="w-full h-12 bg-primary text-white font-bold rounded-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-2 text-sm shadow-sm"
             type="submit">
             Sign Up
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -136,7 +135,7 @@
       <div class="mt-8 text-center">
         <p class="text-sm text-secondary-gray">
           Already have an account?
-          <a class="text-sprout font-bold hover:underline ml-1" href="/login">Login</a>
+          <a class="text-primary font-bold hover:underline ml-1" href="/login">Login</a>
         </p>
       </div>
     </div>
