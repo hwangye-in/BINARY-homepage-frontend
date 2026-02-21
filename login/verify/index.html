@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html class="light" lang="ko">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>BINARY - Email Verification</title>
 
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
@@ -37,42 +40,26 @@
   </script>
 
   <style>
-    body { font-family: "Inter", sans-serif; }
-    h1, h2, h3, h4, .font-display { font-family: "Space Grotesk", sans-serif; }
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+      font-family: "Space Grotesk", sans-serif;
+    }
   </style>
+  <script src="/js/components.js" defer></script>
 </head>
 
-<body class="bg-white text-black font-sans min-h-screen flex flex-col antialiased selection:bg-sprout selection:text-white">
+<body
+  class="bg-white text-black font-sans min-h-screen flex flex-col antialiased selection:bg-sprout selection:text-white">
 
- 
-  <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
-    <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3 w-40">
-    
-        <a href="../../index.html" class="text-xl font-bold tracking-tight font-display">BINARY</a>
-      </div>
 
-      <nav class="hidden md:flex items-center gap-10">
-        <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../../index.html">Home</a>
-        <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../../about/index.html">About</a>
-        <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../../activity/index.html">Activity</a>
-        <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../../board/index.html?page=1">Board</a>
-        <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../../ranking/index.html">Ranking</a>
-      </nav>
-
-      <div class="flex items-center justify-end gap-4 w-40">
-    
-        <a href="../index.html"
-           class="flex items-center justify-center px-6 py-2 rounded-lg bg-sprout hover:bg-sprout-hover text-white text-sm font-bold transition-all shadow-md hover:shadow-lg font-body">
-          Login
-        </a>
-      </div>
-
-      <button class="md:hidden text-2xl" type="button">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </header>
+  <app-header></app-header>
 
   <main class="flex-grow flex items-center justify-center py-10 px-4 md:px-6 bg-white">
     <div class="w-full max-w-[480px] flex flex-col bg-white rounded-xl p-6 md:p-10 shadow-sm border border-gray-200">
@@ -103,24 +90,18 @@
 
             <input
               class="form-input w-full rounded-lg text-black focus:outline-0 focus:ring-2 focus:ring-sprout/50 focus:border-sprout border border-gray-200 bg-white h-12 pl-11 pr-4 placeholder:text-gray-400 text-base font-normal transition-all"
-              id="code"
-              maxlength="6"
-              name="code"
-              placeholder="Enter Code"
-              required
-              type="text"
-            />
+              id="code" maxlength="6" name="code" placeholder="Enter Code" required type="text" />
           </div>
         </div>
 
         <div class="flex flex-col gap-4">
-          <button class="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-sprout hover:bg-sprout-hover active:scale-[0.98] transition-all text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md shadow-sprout/20 mt-2"
-                  type="submit">
+          <button
+            class="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-sprout hover:bg-sprout-hover active:scale-[0.98] transition-all text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md shadow-sprout/20 mt-2"
+            type="submit">
             Verify
           </button>
 
-          <button class="text-black hover:text-sprout transition-colors text-sm font-semibold"
-                  type="button">
+          <button class="text-black hover:text-sprout transition-colors text-sm font-semibold" type="button">
             Resend Code
           </button>
         </div>
@@ -128,13 +109,16 @@
 
       <div class="mt-8 text-center pt-6 border-t border-gray-100">
         <a class="inline-flex items-center gap-2 text-black hover:text-sprout transition-colors text-sm font-medium group"
-           href="../index.html">
-          <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          href="../index.html">
+          <span
+            class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
           Back to Login
         </a>
       </div>
     </div>
   </main>
 
+  <app-footer></app-footer>
 </body>
+
 </html>
