@@ -5,6 +5,7 @@
 <title>BINARY - Member Login</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -14,6 +15,7 @@
           extend: {
             colors: {
               "primary-black": "#000000",
+               "primary-hover": "#16a34a",
               "secondary-gray": "#6b7280",
               "border-light": "#e5e7eb",
               "background-light": "#ffffff",
@@ -21,17 +23,23 @@
               "sprout-hover": "#16a34a"
             },
             fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
               "sans": ["Inter", "sans-serif"]
             },
-            borderRadius: {
-                "DEFAULT": "0.375rem",
-                "lg": "0.5rem",
-                "xl": "1rem"
-            },
+            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
           },
         },
       }
     </script>
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: "Space Grotesk", sans-serif;
+        }
+    </style>
 <style type="text/tailwindcss">
         @layer base {
             body {
@@ -45,20 +53,31 @@
     </style>
 </head>
 <body class="flex flex-col min-h-[1024px] selection:bg-sprout selection:text-white">
-<header class="flex items-center justify-between px-12 py-8 bg-white h-24">
-<div class="flex items-center w-1/4">
-<a href="../index.html" class="text-black text-2xl font-bold tracking-tight">BINARY</a>
-</div>
-<nav class="hidden md:flex items-center justify-center gap-10 w-2/4">
-<a class="text-sm font-normal text-black hover:text-sprout transition-colors uppercase tracking-widest" href="../index.html">HOME</a>
-<a class="text-sm font-normal text-black hover:text-sprout transition-colors uppercase tracking-widest" href="../about/index.html">ABOUT</a>
-<a class="text-sm font-normal text-black hover:text-sprout transition-colors uppercase tracking-widest" href="../activity/index.html">ACTIVITY</a>
-<a class="text-sm font-normal text-black hover:text-sprout transition-colors uppercase tracking-widest" href="../board/index.html?page=1">BOARD</a>
-<a class="text-sm font-normal text-black hover:text-sprout transition-colors uppercase tracking-widest" href="../ranking/index.html">RANKING</a>
-</nav>
-<div class="flex items-center justify-end w-1/4">
-<a class="text-sm font-bold bg-sprout text-white px-8 py-2.5 rounded-lg hover:bg-sprout-hover transition-colors shadow-sm" href="login.html">Login</a>
-</div>
+<header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
+  <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-3 w-40">
+      <a href="../index.html" class="text-xl font-bold tracking-tight font-display">BINARY</a>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-10">
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../index.html">Home</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../about/index.html">About</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../activity/index.html">Activity</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../board/index.html?page=1">Board</a>
+      <a class="text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="../ranking/index.html">Ranking</a>
+    </nav>
+
+    <div class="flex items-center justify-end gap-4 w-40">
+      <a href="index.html"
+         class="flex items-center justify-center px-6 py-2 rounded-lg bg-sprout hover:bg-sprout-hover text-white text-sm font-bold transition-all shadow-md hover:shadow-lg font-body">
+        Login
+      </a>
+    </div>
+
+    <button class="md:hidden text-2xl" type="button">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
 </header>
 <main class="flex-grow flex items-center justify-center px-4 py-20">
 <div class="w-full max-w-[420px]">
@@ -85,7 +104,7 @@
 <input class="rounded border-border-light text-sprout focus:ring-sprout h-4 w-4" id="remember" type="checkbox"/>
 <label class="ml-2 text-sm text-secondary-gray" for="remember">Remember me</label>
 </div>
-<a class="text-sm font-medium text-black hover:text-sprout transition-colors" href="#">Forgot Password?</a>
+<a class="text-sm font-medium text-black hover:text-sprout transition-colors" href="./reset_password/index.html">Forgot Password?</a>
 </div>
 <button class="w-full h-14 mt-4 bg-sprout text-white font-bold rounded-lg hover:bg-sprout-hover transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider text-sm" type="submit">
                     Login
@@ -95,18 +114,59 @@
 <div class="mt-12 pt-8 border-t border-gray-50 flex flex-col items-center gap-4 text-sm">
 <p class="text-secondary-gray">
                     Don't have an account yet?
-                    <a class="text-black font-bold hover:text-sprout transition-colors underline underline-offset-4" href="#">Create Account</a>
+                    <a class="text-black font-bold hover:text-sprout transition-colors underline underline-offset-4" href="./signup/index.html">Create Account</a>
 </p>
 </div>
 </div>
 </main>
-<footer class="py-12 text-center text-[11px] text-gray-400 uppercase tracking-[0.2em] bg-white">
-<div class="flex flex-col gap-4">
-<p>© 2024 BINARY Computer Club • All Rights Reserved</p>
-<div class="flex justify-center gap-8 font-medium">
-<a class="hover:text-black transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-black transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-black transition-colors" href="#">Support</a>
+<footer class="w-full bg-white border-t border-gray-100 py-12 mt-auto">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="font-bold tracking-tight">BINARY</span>
+</div>
+<p class="text-gray-500 text-sm max-w-sm mb-6">
+                    Empowering the next generation of technology leaders through code, community, and collaboration.
+                </p>
+<div class="text-gray-400 text-xs">
+                    © 2023 BINARY School Computer Club. All rights reserved.
+                </div>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Links</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-primary transition-colors" href="../index.html">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="../about/index.html">About</a></li>
+<li><a class="hover:text-primary transition-colors" href="../activityindex.html">Activity</a></li>
+<li><a class="hover:text-primary transition-colors" href="../board/index.html?page=1">Board</a></li>
+<li><a class="hover:text-primary transition-colors" href="../ranking/index.html">Ranking</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-gray-50 
+          flex items-center justify-center 
+          group hover:bg-black transition-colors duration-200" 
+   href="https://open.kakao.com/o/s5eNFOne">
+
+  <img src="https://cdn.simpleicons.org/kakaotalk/6B7280" 
+       alt="KakaoTalk"
+       class="w-5 h-5 transition-all duration-200 
+              group-hover:brightness-0 group-hover:invert">
+</a>
+
+<a class="w-10 h-10 rounded-full bg-gray-50 
+          flex items-center justify-center 
+          group hover:bg-black transition-colors duration-200" 
+   href="https://instagram.com/sejong_binary">
+
+  <img src="https://cdn.simpleicons.org/instagram/6B7280" 
+       alt="Instagram"
+       class="w-5 h-5 transition-all duration-200 
+              group-hover:brightness-0 group-hover:invert">
+</a>
+</div>
 </div>
 </div>
 </footer>
