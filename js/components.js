@@ -4,14 +4,14 @@ class AppHeader extends HTMLElement {
       <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
         <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
           <div class="flex items-center gap-3 w-40">
-            <a href="/index.html" class="text-xl font-bold tracking-tight font-display">BINARY</a>
+            <a href="/" class="text-xl font-bold tracking-tight font-display">BINARY</a>
           </div>
           <nav class="hidden md:flex items-center gap-10">
-            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/index.html">Home</a>
-            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/about/index.html">About</a>
-            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/activity/index.html">Activity</a>
-            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/board/index.html?page=1">Board</a>
-            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/ranking/index.html">Ranking</a>
+            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/">Home</a>
+            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/about">About</a>
+            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/activity">Activity</a>
+            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/board">Board</a>
+            <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/ranking">Ranking</a>
           </nav>
           <div class="flex items-center justify-end gap-4 w-40">
             <button onclick="location.href='/login/index.html'"
@@ -35,12 +35,12 @@ class AppHeader extends HTMLElement {
 
     links.forEach(link => {
       const linkPath = new URL(link.href).pathname;
-      
+
       // Check if current path starts with link path (to handle /board/post... etc)
       // Special case for Home (/index.html or /)
       let isActive = false;
-      if (linkPath === '/index.html' || linkPath === '/') {
-        isActive = currentPath === '/index.html' || currentPath === '/';
+      if (linkPath === '/' || linkPath === '/index.html') {
+        isActive = currentPath === '/' || currentPath === '/index.html';
       } else {
         isActive = currentPath.startsWith(linkPath.replace('/index.html', ''));
       }
@@ -60,7 +60,7 @@ class AppFooter extends HTMLElement {
         <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-2 mb-4">
-              <a href="/index.html" class="font-bold tracking-tight font-display text-text-main hover:text-primary transition-colors">BINARY</a>
+              <a href="/" class="font-bold tracking-tight font-display text-text-main hover:text-primary transition-colors">BINARY</a>
             </div>
             <p class="text-gray-500 text-sm max-w-sm mb-6">
               Empowering the next generation of technology leaders through code, community, and collaboration.
@@ -72,11 +72,11 @@ class AppFooter extends HTMLElement {
           <div>
             <h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Links</h4>
             <ul class="space-y-2 text-sm text-gray-500">
-              <li><a class="hover:text-primary transition-colors" href="/index.html">Home</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/about/index.html">About</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/activity/index.html">Activity</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/board/index.html?page=1">Board</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/ranking/index.html">Ranking</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/">Home</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/about">About</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/activity">Activity</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/board">Board</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/ranking">Ranking</a></li>
             </ul>
           </div>
           <div>
