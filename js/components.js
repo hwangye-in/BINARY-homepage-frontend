@@ -14,7 +14,7 @@ class AppHeader extends HTMLElement {
             <a class="nav-link text-sm font-semibold text-gray-500 hover:text-black transition-colors uppercase tracking-wide" href="/ranking">Ranking</a>
           </nav>
           <div class="flex items-center justify-end gap-4 w-40">
-            <button onclick="location.href='/login/index.html'"
+            <button onclick="location.href='/login'"
               class="flex items-center justify-center px-6 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-bold transition-all shadow-md hover:shadow-lg font-body">
               Login
             </button>

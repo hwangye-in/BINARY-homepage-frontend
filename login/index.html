@@ -18,13 +18,12 @@
       theme: {
         extend: {
           colors: {
+            "primary": "#22c55e",
             "primary-black": "#000000",
             "primary-hover": "#16a34a",
             "secondary-gray": "#6b7280",
             "border-light": "#e5e7eb",
             "background-light": "#ffffff",
-            "sprout": "#22c55e",
-            "sprout-hover": "#16a34a"
           },
           fontFamily: {
             "display": ["Space Grotesk", "sans-serif"],
@@ -63,7 +62,7 @@
   <script src="/js/components.js" defer></script>
 </head>
 
-<body class="flex flex-col min-h-[1024px] selection:bg-sprout selection:text-white">
+<body class="flex flex-col min-h-[1024px] selection:bg-primary selection:text-white">
   <app-header></app-header>
   <main class="flex-grow flex items-center justify-center px-4 py-20">
     <div class="w-full max-w-[420px]">
@@ -76,14 +75,14 @@
           <label class="text-xs font-bold uppercase tracking-widest text-black" for="identity">Student ID or
             Email</label>
           <input
-            class="w-full px-4 h-14 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300"
+            class="w-full px-4 h-14 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300"
             id="identity" placeholder="Student ID or Email" type="text" />
         </div>
         <div class="flex flex-col gap-2.5">
           <label class="text-xs font-bold uppercase tracking-widest text-black" for="password">Password</label>
           <div class="relative">
             <input
-              class="w-full px-4 h-14 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-sprout focus:border-sprout transition-all placeholder:text-gray-300"
+              class="w-full px-4 h-14 bg-white border border-border-light rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-300"
               id="password" placeholder="••••••••" type="password" />
             <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black transition-colors"
               type="button">
@@ -93,15 +92,15 @@
         </div>
         <div class="flex items-center justify-between py-1">
           <div class="flex items-center">
-            <input class="rounded border-border-light text-sprout focus:ring-sprout h-4 w-4" id="remember"
+            <input class="rounded border-border-light text-primary focus:ring-primary h-4 w-4" id="remember"
               type="checkbox" />
             <label class="ml-2 text-sm text-secondary-gray" for="remember">Remember me</label>
           </div>
-          <a class="text-sm font-medium text-black hover:text-sprout transition-colors"
-            href="./reset_password/index.html">Forgot Password?</a>
+          <a class="text-sm font-medium text-black hover:text-primary transition-colors" href="/reset_password">Forgot
+            Password?</a>
         </div>
         <button
-          class="w-full h-14 mt-4 bg-sprout text-white font-bold rounded-lg hover:bg-sprout-hover transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider text-sm"
+          class="w-full h-14 mt-4 bg-primary text-white font-bold rounded-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider text-sm"
           type="submit">
           Login
           <span class="material-symbols-outlined text-lg">arrow_forward</span>
@@ -110,8 +109,8 @@
       <div class="mt-12 pt-8 border-t border-gray-50 flex flex-col items-center gap-4 text-sm">
         <p class="text-secondary-gray">
           Don't have an account yet?
-          <a class="text-black font-bold hover:text-sprout transition-colors underline underline-offset-4"
-            href="./signup/index.html">Create Account</a>
+          <a class="text-black font-bold hover:text-primary transition-colors underline underline-offset-4"
+            href="/signup">Create Account</a>
         </p>
       </div>
     </div>
